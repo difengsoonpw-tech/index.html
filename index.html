@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PWDF Wholesale Ordering Portal</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>PWDF Wholesale Ordering Portal</header>
+  <div id="menuContainer"></div>
+
+  <div id="summaryPanel">
+    <div><b>Items:</b> <span id="cartCount">0</span></div>
+    <div><button class="summary-btn" onclick="openSummary()">Summary</button></div>
+  </div>
+
+  <div id="summaryPopup">
+    <div class="summary-box">
+      <button class="close-btn" onclick="closeSummary()">Close</button>
+      <h3>Order Summary</h3>
+      <textarea id="summaryText"></textarea>
+      <div style="margin-top:12px; display:flex; gap:8px;">
+        <button class="summary-btn" onclick="sendWhatsApp()">Send WhatsApp</button>
+        <button class="add-btn" onclick="copyText()">Copy</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
