@@ -1,1734 +1,901 @@
-const PRODUCTS = {
-  "BREAD": [
-    {
-      "name": "BREAD-BG-B0004 BRIOCHE BURGER BUN 60GM+/- (NO SESAME) x 54PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BG-B0043 BURGER BUN 60GM+/- (NO SESAME) x 54PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BG-B0008 BURGER BUN 60GM+/- (SESAME) x 54PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BG-B0009 4.5\" BURGER BUN 80GM+/- (SESAME) x 54PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BG-C0003 CHARCOAL BUN 60GM+/- (NO SESAME) x 54PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BG-C0011 CHARCOAL BUN 60GM+/- (WHITE SESAME) X 54PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BG-E0002 ENGLISH MUFFIN 60GM+/- x 40PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BG-M0001 MINI BURGER BUN 35GM+/- (SESAME) x 120PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BG-M0003 MINI SOFT BUN 35GM+/- x 120PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BG-P0001 (P) BURGER BUN 60GM+/- (SESAME) x 54PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BG-P0002 (P) BURGER BUN 80GM+/- (SESAME) x 54PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BG-P0009 POLO BURGER BUN 80GM+/- x 30PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BG-S0004 SOUP BREAD 140GM+/- x 30PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BR-H0001 HANDMADE CIABATTA 85-95GM+/- (3\" x 6.5 - 7\") x 54PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BR-H0002 HANDMADE PANINI BREAD 100GM+/- (3\" x 6.5 - 7\") x 54PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-FL-F0001 23\" FRENCH LOAF 300GM+/- x 18LOAF",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-FL-O0002 6\" OREGANO PARMESAN CHEESE BAGUETTE 90GM+/- x 40ROLL",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-FL-V0007 7\" VIETNAM BREAD BAGUETTE 100GM+/- x 54PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-B0014 BRIOCHE LOAF 350GM+/- x 12UNIT (CUT 1.5CM, 13 SLICE+/-)",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-K0002 KRAFT BREAD 350GM+/- x 12UNIT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-S0009 SOURDOUGH BREAD 390GM+/- x 12UNIT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-L0002 LIGHT BROWN SANDWICH LOAF 700GM+/- (OPEN TOP) x 6UNIT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-C0005 CHARCOAL SANDWICH LOAF 900GM+/- x 6UNIT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-M0004 MULTIGRAIN SANDWICH LOAF 400GM+/- (OPEN TOP) x 12UNIT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-W0036 WHITE SANDWICH LOAF 400GM+/- (OPEN TOP) x 8UNIT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-W0015 WHITE SANDWICH LOAF 700GM+/- (OPEN TOP) x 6UNIT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-W0004 WHITE SANDWICH LOAF 900GM+/- x 6UNIT (UNCUT)",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-W0002 WHITE SANDWICH LOAF 900GM+/- x 6UNIT (CUT 1.5CM, 20 SLICE+/-)",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-W0018 WHITE SANDWICH LOAF 900GM+/- x 6UNIT (CUT 2CM, 15 SLICE+/-)",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-W0009 WHOLEMEAL SANDWICH LOAF 850GM+/- x 6UNIT (CUT 1.5CM)",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-LF-S0003 SHIBUYA TOAST 1000GM+/- x 6UNIT (CUT 5CM(2\"))",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-RL-S0002 6\" SAUSAGE ROLL 60GM+/- WITH SESAME x 56ROLL",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BL-G0004 SOURDOUGH BAGEL 100GM+/- (INDIVIDUAL PACK)",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BL-G0007 CHEESE BAGEL 100GM+/- (INDIVIDUAL PACK)",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BL-G0008 MULTISEED BAGEL 100GM+/- (INDIVIDUAL PACK)",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "BREAD-BL-G0009 POPPY SEED BAGEL 100GM+/- (INDIVIDUAL PACK)",
-      "choice": "",
-      "addon": ""
-    }
-  ],
-  " WHOLE CAKE": [
-    {
-      "name": "CAKE-CR10-A0003 10\" APPLE CRUMBLE *(h)4.5cm+/- UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR10-C0014 10\" CHOCOLATE BANANA PIE UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR10-S0004 10\" STRAWBERRY SHORTCAKE *(h)6.5cm+/- UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR10-A0001 10\" ALMOND TIRAMISU CAKE *(h)6.5cm+/- UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR10-C0007 10\" CALIFORNIAN CARROT & WALNUT CAKE *(h)6.5cm+/- UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR10-F0001 10\" FLOURLESS CHOCOLATE CAKE *(h)4cm+/- UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR10-R0002 10\" RED VELVET CAKE *(h)6.5cm+/- UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR10-R0005 10\" RAINBOW CAKE WITH MARSHMALLOW UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR10-S0001 10\" SALTED CARAMEL CHEESE CAKE UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR10-N0005 10\" NUTELLA CHEESE CAKE UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR10-S0002 10\" SALTED CARAMEL MACADAMIA CHEESE CAKE *(h)4.5cm+/- UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR9-G0002 9\" GENMAICHA PASSION FRUIT CHEESE MOUSSE CAKE UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR9-C0002 9\" DARK CHOCOLATE MILLE CREPE *(h)6cm+/- UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR9-V0002 9\" VANILLA MILLE CREPE *(h)6cm+/- UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR9-T0001 9\" TIRAMISU MILLE CREPE *(h)6cm+/- UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR9-G0001 9\" GREEN TEA ADZUKI MILLE CREPE *(h)5.5cm+/- UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR9-P0001 9\" PEACH LYCHEE DOUBLE CHEESE CAKE UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR9-P0002 9\" PISTACHIO PRALINE CAKE UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR9-R0002 9\" RASPBERRY CHOCOLATE CAKE UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR9-C0001 CARAMELISE UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR9-C0004 CHOCOLATE COFFEE WALNUT CAKE UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR9-C0008 BLACK FOREST CAKE UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR9-F0002 FOREST NOIRE UNIT 12",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-C0008 8\" CLASSIC BLACK FOREST *6.5cm(h) UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-R0007 8\" RAINBOW CAKE *(h)6.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-A0002 8\" AMERICA CHOCOLATE FUDGE CAKE *(h)6.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-B0001 8\" BANANA CHOCOLATE CAKE *(h)6.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-C0029 8\" CHOCOLATE GANACHE CAKE *(h)6.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-M0033 8\" PANDAN GULA MELAKA CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-C0007 8\" CHOCOLATE WALNUT CAKE *(h)6.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-C0009 8\" CLASSIC CHEESE CAKE *(h)4.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-F0001 8\" FLOURLESS CHOCOLATE CAKE *(h)4cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-P0027 8\" PASSION MANGO CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-S0001 8\" SALTED CARAMEL CHEESE CAKE *(h)4.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-N0002 8\" NUTELLA TORTE CAKE *(h)4cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-R0016 8\" RAINBOW CAKE WITH MARSHMALLOW UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-B0003 8\" BLUEBERRY CHEESE CAKE *(h)4.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-M0034 8\" MANDARIN FLOURLESS CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-N0001 8\" NEW YORK CHEESE CAKE *(h)4.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-O0002 8\" OREO CHEESE CAKE *(h)4.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-R0001 8\" RASPBERRY CHEESE *(h)4.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-R0004 8\" RED VELVET CAKE *(h)6.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-S0019 8\" SF BURNT CHEESE CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-A0001 8\" ALMOND TIRAMISU CAKE *(h)6.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-F0002 8\" FOREST NOIRE *6.5cm(h) UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-H0001 8\" HAZELNUT TORTE CAKE*(h)6.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-C0033 8\" CHOCOLATE INDULGENCE CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-M0002 8\" MISSISSIPPI MUD CAKE *(h)6.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-T0002 8\" TIRAMISU CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-A0004 8\" APPLE CRUMBLE CHEESE CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-B0011 8\" BH BURNT CHEESE CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-B0012 8\" BISCOFF CHEESE CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-C0080 8\" CANADIAN CARROT WALNUT CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-M0010 8\" MANGO MOUSSE CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-P0028 8\" PANDAN COCO CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-P0007 8\" PANDAN GULA MELAKA CHEESE CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-S0002 8\" SALTED CARAMEL MACADAMIA CHEESE CAKE *(h)4.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-S0006 8\" SNICKER CHOCOLATE CARAMEL CAKE *(h)6.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-C0018 8\" CALIFORNIAN CARROT & WALNUT CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-N0004 8\" NUTELLA CHEESE CAKE *(h)4.5cm+/- UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-O0008 8\" OREO CHILLED CHEESE CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-C0078 8\" CEMPEDAK CHEESE CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-B0013 8\" BISCOFF BUTTER CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-O0009 8\" OREO CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-R0029 8\" RUSSIAN HONEY CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-S0042 8\" STRAWBERRY CHEESE CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-S0007 8\" STRAWBERRY FROMAGE CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CR8-C0030 8\" CALLEBAUT CHOCOLATE CAKE UNIT 10",
-      "choice": "UNCUT / CUT",
-      "addon": ""
-    }
-  ],
-  "BLOCK CAKE": [
-    {
-      "name": "CAKE-BLK-Y0001 BLOCK YAM CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-T0001 BLOCK TIRAMISU CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-R0008 BLOCK RAINBOW CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-P0019 BLOCK OPERA CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-P0012 BLOCK HAZELNUT CHOCOLATE (GIANDUJA) CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-P0008 BLOCK BANANA CHOCOLATE CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-P0006 BLOCK PANDAN CEMPEDAK CAKE *(h)3cm+/- BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-P0004 BLOCK PISTACHIO MOCHA CAKE LAPIS *(h)3cm+/- BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-L0003 BLOCK LAMINGTON CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-L0002 BLOCK LYCHEE STRAWBERRY CAKE *(h)3cm+/- BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-G0001 BLOCK GREEN TEA CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-C0002 BLOCK CHOCOLATE CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-B0038 BLOCK BANANA WALNUT CAKE *(h)3cm+/- BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-B0037 BLOCK CHOCOLATE FUDGE CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-B0036 BLOCK CARROT CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-B0035 BLOCK BROWNIES CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-B0034 BLOCK BANANA KAYA CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-B0030 BLOCK MANGO CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-B0029 BLOCK BLUEBERRY CHILL CHEESE CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-B0028 BLOCK RED VELVET CAKE BLOCK",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-C0006 CEMPEDAK CHEESE CAKE",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-C0004 COCONUT CAKE",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-P0061 PANDAN GULA MELAKA CAKE",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-BLK-R0009 GULA MELAKA CAKE",
-      "choice": "Uncut 45pcs / 60pcs",
-      "addon": "Decoration + RM10 only for 90 pcs and 45 pcs"
-    }
-  ],
-  "DONUT": [
-    {
-      "name": "DONUT-C0001 4\" CHOCOLATE DONUT 80GM+/- x 16PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DONUT-O0001 4\" OREO DONUT 80GM+/- x 16PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DONUT-R0001 4\" RASPBERRY DONUT 80GM+/- x 16PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DONUT-S0001 4\" STRAWBERRY DONUT 80GM+/- x 16PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DONUT-W0001 4\" WHITE CHOCOLATE DONUT 80GM+/- x 16PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DONUT-P0003 4\" PLAIN DONUT RING 55GM+/- x 40PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DONUT-P0012 MINI PLAIN DONUT (20GM+/-) x 120PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DONUT-C0002 4\" DARK CHOCOLATE KUNAFA DONUT 80GM+/- x 16PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DONUT-P0005 4\" PISTACHIO DONUT 80GM+/- x 16PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DONUT-S0002 4\" SEA SALT CARAMEL DONUT 80GM+/- x 16PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DONUT-T0001 4\" TIRAMISU DONUT 80GM+/- x 16PCS",
-      "choice": "",
-      "addon": ""
-    }
-  ],
-  "INDIVIDUAL CAKE": [
-    {
-      "name": "CAKE-IL-C0002 CARAMELIS CHOCOLATE CAKE *(h)3.5cm+/- BOX-6 100GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-C0017 CLASSIC CAPPUCINO CAKE *(h)3.5cm+/- BOX-6 105GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-B0003 BROWNIES *(h)4cm+/- BOX-9 120GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-G0002 GREEN TEA CAKE *(h)5cm+/- BOX-9 100GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-L0006 DOUBLE CHOCOLATE CAKE *(h)4cm+/- BOX-9 130GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-P0001 PYRAMIDIEN CAKE *(h)3cm+/- BOX-9 60GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-B0002 BLUEBERRY CHEESE CAKE *(h)3.5cm+/- BOX-9 150GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-M0007 MILKY CHOCOLATE CAKE *(h)5cm+/- BOX-9 120GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-P0022 PASSION FRUIT YOGURT GATEAUX x 8PCS BLK-8 100GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-T0004 TROPICAL MANGO CAKE *8cm+/- x 4cm+/- x (h)3.5cm+/- BOX-10 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-T0002 TIRAMISU CUP *(h)4cm+/- BOX-9 100GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-C0038 CARAMEL CAKE *(h)7cm+/- x 8PCS BLK-8 105GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-M0012 MOCHA CAKE *(h)5cm+/- BOX-10 130GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-E0014 EXOTIC COCONUT x 8PCS BLK-8 98GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-H0009 HOJICHA CAKE x 12PCS BLK-12 120GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-I0002 ISPAHAN CAKE *3cm+/- x 13.5cm+/- x (h)5.3cm x 12PCS BLK-12 95GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-R0016 RED FRUIT CHOCOLATE CAKE x 12PCS BLK-12 70GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-H0008 HAZELNUT CAKE *2.5cm+/- x 12cm+/- x (h)4cm+/- x 12PCS BLK-12 100GM+/-",
-      "choice": "",
-      "addon": ""
-    }
-  ],
-  "INDIVIDUAL CAKE - CUP SERIES": [
-    {
-      "name": "CAKE-CUP-M0001 CARAMEL COFFEE CUP x 48CUP 31GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CUP-M0002 GREEN TEA ADZUKI CUP x 48CUP 37.5GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CUP-M0003 INDULGENCE CUP x 48CUP 31.5GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CUP-M0004 ORANGE CHOCOLATE CUP x 48CUP 34.5GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CUP-M0005 PANDAN GULA MELAKA CUP x 48CUP 25.5GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CUP-M0006 PINEAPPLE COCONUT CUP x 48CUP 32GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CUP-M0007 PASSION MANGO CUP x 48CUP 32GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CUP-M0008 ROSE LYCHEE CUP x 48CUP 23.5GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CUP-M0009 SLAB-48",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-CUP-M0010 SLAB-48",
-      "choice": "",
-      "addon": ""
-    }
-  ],
-  "INDIVIDUAL CAKE - OPERA SERIES": [
-    {
-      "name": "CAKE-IL-O0001 OPERA CAKE (10cm+/- x 3.5cm+/-) *(h)3.5cm+/- BOX-10 100GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-H0007 HAZELNUT OPERA CAKE *12.5cm+/- x 3cm+/- x 12PCS BLK-12 85GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-M0035 MATCHA OPERA CAKE *12.5cm+/- x 3cm+/- x 12PCS BLK-12 85GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-R0015 RASPBERRY OPERA CAKE *12.5cm+/- x 3cm+/- x 12PCS BLK-12 85GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-S0005 SEA SALT OPERA CAKE *12.5cm+/- x 3cm+/- x 12PCS BLK-12 85GM+/-",
-      "choice": "",
-      "addon": ""
-    }
-  ],
-  "INDIVIDUAL CAKE - PETITE SERIES": [
-    {
-      "name": "CAKE-IL-P0023 PETIT FOUR * VANILLA RASPBERRY BUTTER CAKE x 36PCS BOX-36 10GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-P0024 PETIT FOUR * LEMON POPPY SEED BUTTER CAKE x 24PCS BOX-24 10GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-P0025 PETIT FOUR * GREEN TEA BUTTER CAKE x 40PCS BOX-40 10GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-P0026 PETIT FOUR * HAZELNUT BUTTER CAKE x 40PCS BOX-40 11GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CAKE-IL-P0027 PETIT FOUR * CHOCOLATE BUTTER CAKE x 35PCS BOX-35 10GM+/-",
-      "choice": "",
-      "addon": ""
-    }
-  ],
-  "MACARON": [
-    {
-      "name": "MCN-M0012 MACAROON SHELL * YELLOW COLOUR - TRAY x 20 PAIR (4cm+/- & 10GM+/- )",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0013 MACAROON SHELL * PINK COLOUR - TRAY x 20 PAIR (4cm+/- & 10GM+/- )",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0014 MACAROON SHELL * BLUE COLOUR - TRAY x 20 PAIR (4cm+/- & 10GM+/- )",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0015 MACAROON SHELL * ORANGE COLOUR - TRAY x 20 PAIR (4cm+/- & 10GM+/- )",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0016 MACAROON SHELL * BROWN COLOUR - TRAY x 20 PAIR (4cm+/- & 10GM+/- )",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0017 MACAROON SHELL * DARK BROWN COLOUR - TRAY x 20 PAIR (4cm+/- & 10GM+/- )",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0018 MACAROON SHELL * GREEN COLOUR - TRAY x 20 PAIR (4cm+/- & 10GM+/- )",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0019 MACAROON SHELL * PURPLE COLOUR - TRAY x 20 PAIR (4cm+/- & 10GM+/- )",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0020 MACAROON SHELL * WHITE COLOUR - TRAY x 20 PAIR (4cm+/- & 10GM+/- )",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0001 MACARON - LEMON TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0002 MACARON - PEANUT TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0003 MACARON - BLUEBERRY TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0004 MACARON - DARK CHOCOLATE TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0005 MACARON - GREEN TEA TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0006 MACARON - ORANGERIE TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0007 MACARON - STRAWBERRY TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0008 MACARON - YAM TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0001 MACARON - CHOCO BANANA TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0002 MACARON - COFFEE WALNUT TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0003 MACARON - GIANDUJA TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0004 MACARON - MANGO PASSION TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0005 MACARON - MINT CHOCO TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0007 MACARON - RASPBERRY TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0019 MACARON - RED VELVET with CREAM CHEESE TRAY-20 12GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0012-P STAMPED MACAROON SHELL YELLOW - TRAY x 20 PAIR 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0012-P STAMPED MACAROON SHELL YELLOW - TRAY x 20 PAIR 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0013-P STAMPED MACAROON SHELL PINK - TRAY x 20 PAIR 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0013-P STAMPED MACAROON SHELL PINK - TRAY x 20 PAIR 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0014-P STAMPED MACAROON SHELL BLUE - TRAY x 20 PAIR 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0014-P STAMPED MACAROON SHELL BLUE - TRAY x 20 PAIR 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0015-P STAMPED MACAROON SHELL ORANGE - TRAY x 20 PAIR 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0015-P STAMPED MACAROON SHELL ORANGE - TRAY x 20 PAIR 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0016-P STAMPED MACAROON SHELL BROWN - TRAY x 20 PAIR 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0016-P STAMPED MACAROON SHELL BROWN - TRAY x 20 PAIR 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0017-P STAMPED MACAROON SHELL DARK BROWN - TRAY x 20 PAIR 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0017-P STAMPED MACAROON SHELL DARK BROWN - TRAY x 20 PAIR 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0018-P STAMPED MACAROON SHELL GREEN - TRAY x 20 PAIR 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0018-P STAMPED MACAROON SHELL GREEN - TRAY x 20 PAIR 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0019-P STAMPED MACAROON SHELL PURPLE - TRAY x 20 PAIR 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0019-P STAMPED MACAROON SHELL PURPLE - TRAY x 20 PAIR 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0020-P STAMPED MACAROON SHELL WHITE - TRAY x 20 PAIR 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-M0020-P STAMPED MACAROON SHELL WHITE - TRAY x 20 PAIR 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0001-P MACARON - LEMON WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0001-P MACARON - LEMON WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0002-P MACARON - PEANUT WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0002-P MACARON - PEANUT WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0003-P MACARON - BLUEBERRY WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0003-P MACARON - BLUEBERRY WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0004-P MACARON - DARK CHOCOLATE WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0004-P MACARON - DARK CHOCOLATE WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0005-P MACARON - GREEN TEA WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0005-P MACARON - GREEN TEA WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0006-P MACARON - ORANGERIE WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0006-P MACARON - ORANGERIE WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0007-P MACARON - STRAWBERRY WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0007-P MACARON - STRAWBERRY WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0008-P MACARON - YAM WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-N0008-P MACARON - YAM WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0001-P MACARON - CHOCO BANANA WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0001-P MACARON - CHOCO BANANA WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0002-P MACARON - COFFEE WALNUT WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0002-P MACARON - COFFEE WALNUT WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0003-P MACARON - GIANDUJA WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0003-P MACARON - GIANDUJA WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0004-P MACARON - MANGO PASSION WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0004-P MACARON - MANGO PASSION WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0005-P MACARON - MINT CHOCO WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0005-P MACARON - MINT CHOCO WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0007-P MACARON - RASPBERRY WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0007-P MACARON - RASPBERRY WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0019-P MACARON - RED VELVET with CREAM CHEESE WITH STAMPED LOGO SLAB-30 1 SIDED",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MCN-P0019-P MACARON - RED VELVET with CREAM CHEESE WITH STAMPED LOGO SLAB-30 2 SIDED",
-      "choice": "",
-      "addon": ""
-    }
-  ],
-  "MINI MUFFIN": [
-    {
-      "name": "MFF-M0053 MINI MUFFIN CHOCOLATE x 24PCS TRAY-24 15-17GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0054 MINI MUFFIN VANILLA x 24PCS TRAY-24 15-17GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0055 MINI MUFFIN GREEN TEA x 24PCS TRAY-24 15-17GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0056 MINI MUFFIN RED VELVET x 24PCS TRAY-24 15-17GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0057 MIXED MINI MUFFIN x 24PCS (CHOCOLATE, VANILLA, GREEN TEA, RED VELVET = 6PCS / FLAVOUR) TRAY-24 15-17GM+/-",
-      "choice": "",
-      "addon": ""
-    }
-  ],
-  "MUFFIN": [
-    {
-      "name": "MFF-M0023 110 GM MUFFIN BLUEBERRY SLAB-30 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0024 110 GM MUFFIN CHOCOLATE BANANA SLAB-30 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0025 110 GM MUFFIN CHOCOLATE CHIPS SLAB-30 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0026 110 GM MUFFIN COFFEE WALNUT SLAB-30 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0027 110 GM MUFFIN ORANGE POPPY SEED SLAB-30 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0033 110 GM MUFFIN DOUBLE CHOCOLATE SLAB-30 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0034 110 GM MUFFIN RED VELVET WITH CREAM CHEESE SLAB-30 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0023-12 110 GM MUFFIN BLUEBERRY x 12PCS BLK-12 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0024-12 110 GM MUFFIN CHOCOLATE BANANA x 12PCS BLK-12 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0025-12 110 GM MUFFIN CHOCOLATE CHIPS x 12PCS BLK-12 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0026-12 110 GM MUFFIN COFFEE WALNUT x 12PCS BLK-12 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0027-12 110 GM MUFFIN ORANGE POPPY SEED x 12PCS BLK-12 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0033-12 110 GM MUFFIN DOUBLE CHOCOLATE x 12PCS BLK-12 110GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "MFF-M0034-12 110 GM MUFFIN RED VELVET WITH CREAM CHEESE x 12PCS BLK-12 110GM+/-",
-      "choice": "",
-      "addon": ""
-    }
-  ],
-  "PASTRY": [
-    {
-      "name": "CRT-B0005 BUTTER CROISSANT 60GM+/- (PRE-BAKED) - 7PCS x 6PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CRT-B0006 BUTTER CROISSANT 80GM+/- (PRE-BAKED) - 6PCS x 6PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CRT-B0010 ARTISAN CROISSANT (PRE-BAKED) - 9PCS x 4PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CRT-B0011 CLASSIC CROISSANT (PRE-BAKED) - 9PCS x 4PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CRT-C0007 CHEESE & CHICKEN SLICE CROISSANT (PRE-BAKED) x 15PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CRT-C0010 CHOCOLATE LAVA CROISSANT (PRE-BAKED) - 7PCS x 4PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CRT-H0002 HAZELNUT LAVA CROISSANT (PRE-BAKED) - 7PCS x 4PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CRT-S0002 SALTED EGG YOLK CROISSANT (PRE-BAKED) - 7PCS x 4PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DP-C0001 CRUFFIN 120GM+/- x 24PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "CRT-C0011 CROFFLE 40GM+/- x 80 PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DP-C0002 MINIATURE CHOCOLATE ROLL DANISH x 56PCS x 2PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DP-C0003 MINIATURE CHICKEN CURRY KAPITAN x 36PCS x 3PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DP-C0006 CUSTARD RAISIN CINNAMON DANISH (PRE-BAKED) x 20PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DP-C0008 CHOCOLATE SPIRAL ROLL DANISH (PRE-BAKED) *(h)3cm+/- x 20PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "DP-C0009 CHOCOLATE ROLL DANISH (PRE-BAKED) x 30PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "PP-PB-B0009 BOLOGNESE CHICKEN PUFF (PRE-BAKED) x 24PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "PP-PB-C0007 CURRY CHICKEN PUFF (PRE-BAKED) x 24PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "PP-PB-K0002 KAPITAN CHICKEN PUFF (PRE-BAKED) x 24PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "PP-PB-R0001 RENDANG CHICKEN PUFF (PRE-BAKED) x 24PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "PP-PB-T0002 TOM YAM CHICKEN PUFF (PRE-BAKED) x 24PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "PP-PB-S0007 6\" SAUSAGE PUFF x 40PCS",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "PP-PB-H0001 SPICED CHICKEN SAUSAGE PUFF (PRE-BAKED) x 40PCS",
-      "choice": "",
-      "addon": ""
-    }
-  ],
-  "PIZZA": [
-    {
-      "name": "PIZZA-P0009 6\" PIZZA BASE 100GM+/- @ 10PCS x 8PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "PIZZA-P0013 8\" PIZZA BASE 90GM+/- (THIN) 5PCS x 28PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "PIZZA-P0012 8\" PIZZA BASE 120GM+/- @ 5PCS x 12PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "PIZZA-P0001 10\" PIZZA BASE 150GM+/- (THIN) @ 5PCS x 24PKT",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "PIZZA-P0002 10\" PIZZA BASE 200GM+/- @ 5PCS x 9PKT",
-      "choice": "",
-      "addon": ""
-    }
-  ],
-  "SCONE": [
-    {
-      "name": "SCN-P0001 PLAIN SCONE 70GM+/- *70mm+/-(D) x 50PCS",
-      "choice": "",
-      "addon": ""
-    }
-  ],
-  "SLAB CAKE": [
-    {
-      "name": "CAKE-SL-Y0001 SLAB YAM CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-T0001 SLAB TIRAMISU CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-S0001 SLAB SEA SALT OPERA CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-R0008 SLAB RAINBOW CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-R0002 SLAB RED VELVET CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-R0001 SLAB RASPBERRY OPERA CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-P0019 SLAB OPERA CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-P0012 SLAB HAZELNUT CHOCOLATE (GIANDUJA) CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-P0006 SLAB PANDAN CEMPEDAK CAKE *(h)3cm+/- SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-P0004 SLAB PISTACHIO MOCHA CAKE LAPIS *(h)3cm+/- SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-P0001 SLAB BANANA CHOCOLATE CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-M0002 SLAB MANGO CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-M0001 SLAB MATCHA OPERA CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-L0002 SLAB LYCHEE STRAWBERRY CAKE *(h)3cm+/- SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-H0001 SLAB HAZELNUT OPERA CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-G0001 SLAB GREEN TEA CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-C0003 SLAB CHOCOLATE FUDGE CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-C0002 SLAB CHOCOLATE CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-C0001 SLAB CARROT CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-B0005 SLAB BANANA WALNUT CAKE *(h)3cm+/- SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-B0004 SLAB LAMINGTON CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-B0003 SLAB BLUEBERRY CHILL CHEESE CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-B0002 SLAB BROWNIES CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-B0001 SLAB BANANA KAYA CAKE SLAB",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-C0006 SLAB CEMPEDAK CHEESE CAKE",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-C0004 COCONUT CAKE",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-P0061 PANDAN GULA MELAKA CAKE",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    },
-    {
-      "name": "CAKE-SL-R0009 GULA MELAKA CAKE",
-      "choice": "Uncut, 90pcs,120pcs",
-      "addon": "Decoration + RM 10 only for 90 pcs and 45 pcs"
-    }
-  ],
-  "TARTLET": [
-    {
-      "name": "TR-C0002 CHOCOLATE TART - 8CM+/-(D) x 3.8CM+/-(H) x 12PCS BOX-12 90GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "TR-L0002 LEMON TART - 8CM+/-(D) x 3.8CM+/-(H) x 12PCS BOX-12 100GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "TR-P0007 PECAN TART - 8CM+/-(D) x 2.8CM+/-(H) x 12PCS BOX-12 92GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "TR-R0001 RASPBERRY TART - 8CM+/-(D) x 3.8CM+/-(H) x 12PCS BOX-12 99GM+/-",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "TR-T0008 TART MIXED FLAVOURS (4 TYPE) - 8CM+/-(D) x 12PCS BOX-12",
-      "choice": "",
-      "addon": ""
-    },
-    {
-      "name": "TR-RD-T0006 TART SHELL - PORTUGUESE RAW DOUGH 70MM (D) 18PKT x 20PCS = 360PCS/CTN 18GM+/-",
-      "choice": "",
-      "addon": ""
-    }
-  ]
+/* =========================================
+   DECORATION SURCHARGE (SELLER ONLY)
+   ========================================= */
+
+const DECORATION_PRICE = {
+  "BLOCK CAKE": 10.50,
+  "SLAB CAKE": 10.50
 };
 
-// Build menu from PRODUCTS
-const container = document.getElementById("menuContainer");
-Object.keys(PRODUCTS).forEach(category => {
-  let catDiv = document.createElement("div");
-  catDiv.className = "category container";
-  catDiv.innerHTML = `<div class="category-title">${category}</div>`;
-  PRODUCTS[category].forEach(item => {
-    let card = document.createElement("div");
+const ORDER_POLICY_TEXT = `
+⚠ IMPORTANT:
+This order is considered CONFIRMED upon submission.
+
+• Amendments are only allowed before the Sales Advisor confirms your order.
+• No changes are allowed after the order has been submitted.
+`;
+
+const ORDER_CONFIRMATION_MESSAGE =
+`⚠ IMPORTANT:
+This order is considered CONFIRMED upon submission.
+
+• Any amendment requests must be made before confirmation by the Sales Advisor.
+• No changes will be accepted once the order has been submitted.
+
+Do you want to proceed?`;
+/* =========================================
+   🔒 SELLER ONLY PRICE MAP
+   (Customer never sees prices)
+   ========================================= */
+
+const PRICE_MAP = {
+
+  /* ===== BREAD ===== */
+  "BREAD-BG-B0004": 99.90,
+  "BREAD-BG-B0043": 59.40,
+  "BREAD-BG-B0008": 59.40,
+  "BREAD-BG-B0009": 72.90,
+  "BREAD-BG-C0003": 78.30,
+  "BREAD-BG-C0011": 83.70,
+  "BREAD-BG-E0002": 70.00,
+  "BREAD-BG-M0001": 90.00,
+  "BREAD-BG-M0003": 78.00,
+  "BREAD-BG-P0001": 70.20,
+  "BREAD-BG-P0002": 83.70,
+  "BREAD-BG-P0009": 69.00,
+  "BREAD-BG-S0004": 60.00,
+  "BREAD-BR-H0001": 132.30,
+  "BREAD-BR-H0002": 126.90,
+  "BREAD-FL-F0001": 64.00,
+  "BREAD-FL-O0002": 84.00,
+  "BREAD-FL-V0007": 97.20,
+  "BREAD-LF-B0014": 86.40,
+  "BREAD-LF-K0002": 96.00,
+  "BREAD-LF-S0009": 93.60,
+  "BREAD-LF-S0010": 93.60,
+  "BREAD-LF-L0002": 51.00,
+  "BREAD-LF-C0005": 75.90,
+  "BREAD-LF-M0004": 72.00,
+  "BREAD-LF-W0036": 44.00,
+  "BREAD-LF-W0015": 56.10,
+  "BREAD-LF-W0004": 56.10,
+  "BREAD-LF-W0002": 56.10,
+  "BREAD-LF-W0018": 56.10,
+  "BREAD-LF-W0009": 63.00,
+  "BREAD-LF-S0003": 104.40,
+  "BREAD-RL-S0002": 70.00,
+  "BREAD-BL-G0004": 79.20,
+  "BREAD-BL-G0007": 79.20,
+  "BREAD-BL-G0008": 79.20,
+  "BREAD-BL-G0009": 79.20,
+
+  /* ===== WHOLE CAKE ===== */
+  "CAKE-CR10-A0003": 78.75,
+  "CAKE-CR10-C0014": 80.85,
+  "CAKE-CR10-S0004": 94.50,
+  "CAKE-CR10-A0001": 103.95,
+  "CAKE-CR10-C0007": 103.95,
+  "CAKE-CR10-F0001": 103.95,
+  "CAKE-CR10-R0002": 103.95,
+  "CAKE-CR10-R0005": 103.95,
+  "CAKE-CR10-S0001": 103.95,
+  "CAKE-CR10-N0005": 110.25,
+  "CAKE-CR10-S0002": 110.25,
+  "CAKE-CR9-G0002": 93.45,
+  "CAKE-CR9-C0002": 93.45,
+  "CAKE-CR9-V0002": 93.45,
+  "CAKE-CR9-T0001": 93.45,
+  "CAKE-CR9-G0001": 93.45,
+  "CAKE-CR9-P0001": 96.60,
+  "CAKE-CR9-P0002": 96.60,
+  "CAKE-CR9-R0002": 98.70,
+  "CAKE-CR9-C0001": 98.70,
+  "CAKE-CR9-C0004": 96.60,
+  "CAKE-CR9-C0008": 93.45,
+  "CAKE-CR9-F0002": 93.45,
+
+  /* ===== 8 INCH CAKE ===== */
+  "CAKE-CR8-C0008": 67.20,
+  "CAKE-CR8-R0007": 69.30,
+  "CAKE-CR8-A0002": 71.40,
+  "CAKE-CR8-B0001": 71.40,
+  "CAKE-CR8-C0029": 71.40,
+  "CAKE-CR8-M0033": 71.40,
+  "CAKE-CR8-C0007": 73.50,
+  "CAKE-CR8-C0009": 73.50,
+  "CAKE-CR8-F0001": 73.50,
+  "CAKE-CR8-P0027": 73.50,
+  "CAKE-CR8-S0001": 74.55,
+  "CAKE-CR8-N0002": 75.60,
+  "CAKE-CR8-R0016": 75.60,
+  "CAKE-CR8-B0003": 78.75,
+  "CAKE-CR8-M0034": 78.75,
+  "CAKE-CR8-N0001": 78.75,
+  "CAKE-CR8-O0002": 78.75,
+  "CAKE-CR8-R0001": 78.75,
+  "CAKE-CR8-R0004": 78.75,
+  "CAKE-CR8-S0019": 78.75,
+  "CAKE-CR8-A0001": 79.80,
+  "CAKE-CR8-F0002": 79.80,
+  "CAKE-CR8-H0001": 79.80,
+  "CAKE-CR8-C0033": 81.90,
+  "CAKE-CR8-M0002": 81.90,
+  "CAKE-CR8-T0002": 81.90,
+  "CAKE-CR8-A0004": 82.95,
+  "CAKE-CR8-B0011": 82.95,
+  "CAKE-CR8-B0012": 82.95,
+  "CAKE-CR8-C0080": 82.95,
+  "CAKE-CR8-M0010": 82.95,
+  "CAKE-CR8-P0028": 82.95,
+  "CAKE-CR8-P0007": 82.95,
+  "CAKE-CR8-S0002": 82.95,
+  "CAKE-CR8-S0006": 82.95,
+  "CAKE-CR8-C0018": 84.00,
+  "CAKE-CR8-N0004": 84.00,
+  "CAKE-CR8-O0008": 85.05,
+  "CAKE-CR8-C0078": 88.20,
+  "CAKE-CR8-B0013": 89.25,
+  "CAKE-CR8-O0009": 89.25,
+  "CAKE-CR8-R0029": 89.25,
+  "CAKE-CR8-S0042": 89.25,
+  "CAKE-CR8-S0007": 89.25,
+   "CAKE-CR8-C0030": 99.75,
+   
+
+  /* ===== BLOCK CAKE ===== */
+  "CAKE-BLK-Y0001": 50.40,
+  "CAKE-BLK-T0001": 63.00,
+  "CAKE-BLK-R0008": 54.60,
+  "CAKE-BLK-P0019": 74.55,
+  "CAKE-BLK-P0012": 74.55,
+  "CAKE-BLK-P0008": 63.00,
+  "CAKE-BLK-P0006": 54.60,
+  "CAKE-BLK-P0004": 54.60,
+  "CAKE-BLK-L0003": 50.40,
+  "CAKE-BLK-L0002": 63.00,
+  "CAKE-BLK-G0001": 50.40,
+  "CAKE-BLK-C0002": 50.40,
+  "CAKE-BLK-B0038": 50.40,
+  "CAKE-BLK-B0037": 54.60,
+  "CAKE-BLK-B0036": 50.40,
+  "CAKE-BLK-B0035": 54.60,
+  "CAKE-BLK-B0034": 50.40,
+  "CAKE-BLK-B0030": 50.40,
+  "CAKE-BLK-B0029": 63.00,
+  "CAKE-BLK-B0028": 50.40,
+  "CAKE-BLK-C0006": 86.10,
+  "CAKE-BLK-C0004": 50.40,
+  "CAKE-BLK-P0061": 54.60,
+  "CAKE-BLK-R0009": 54.60,
+
+  /* ===== SLAB CAKE ===== */
+  "CAKE-SL-Y0001": 92.40,
+  "CAKE-SL-T0001": 115.50,
+  "CAKE-SL-S0001": 157.50,
+  "CAKE-SL-R0008": 99.75,
+  "CAKE-SL-R0002": 92.40,
+  "CAKE-SL-R0001": 157.50,
+  "CAKE-SL-P0019": 136.50,
+  "CAKE-SL-P0012": 136.50,
+  "CAKE-SL-P0006": 99.75,
+  "CAKE-SL-P0004": 99.75,
+  "CAKE-SL-P0001": 115.50,
+  "CAKE-SL-M0002": 92.40,
+  "CAKE-SL-M0001": 157.50,
+  "CAKE-SL-L0002": 115.50,
+  "CAKE-SL-H0001": 157.50,
+  "CAKE-SL-G0001": 92.40,
+  "CAKE-SL-C0003": 99.75,
+  "CAKE-SL-C0002": 92.40,
+  "CAKE-SL-C0001": 92.40,
+  "CAKE-SL-B0005": 92.40,
+  "CAKE-SL-B0004": 92.40,
+  "CAKE-SL-B0003": 115.50,
+  "CAKE-SL-B0002": 99.75,
+  "CAKE-SL-B0001": 92.40,
+  "CAKE-SL-C0006": 157.50,
+  "CAKE-SL-C0004": 92.40,
+  "CAKE-SL-P0061": 99.75,
+  "CAKE-SL-R0009": 99.75,
+
+  /* ===== DONUT ===== */
+  "DONUT-C0001": 57.12,
+  "DONUT-O0001": 60.48,
+  "DONUT-R0001": 57.12,
+  "DONUT-S0001": 57.12,
+  "DONUT-W0001": 57.12,
+  "DONUT-P0003": 73.50,
+  "DONUT-P0012": 102.00,
+  "DONUT-C0002": 57.12,
+  "DONUT-P0005": 60.48,
+  "DONUT-S0002": 57.12,
+  "DONUT-T0001": 57.12,
+
+  /* ===== TARTLET ===== */
+  "TR-C0002": 99.54,
+  "TR-L0002": 86.94,
+  "TR-P0007": 99.54,
+  "TR-R0001": 99.54,
+  "TR-T0008": 96.39,
+  "TR-RD-T0006": 324.00,
+
+  /* ===== INDIVIDUAL CAKE ===== */
+  "CAKE-IL-C0002": 44.10,
+  "CAKE-IL-C0017": 47.25,
+  "CAKE-IL-B0003": 66.15,
+  "CAKE-IL-G0002": 66.15,
+  "CAKE-IL-L0006": 66.15,
+  "CAKE-IL-P0001": 66.15,
+  "CAKE-IL-B0002": 68.99,
+  "CAKE-IL-M0007": 70.88,
+  "CAKE-IL-P0022": 71.40,
+  "CAKE-IL-T0004": 73.50,
+  "CAKE-IL-T0005": 101.75,
+  "CAKE-IL-C0038": 75.60,
+  "CAKE-IL-M0012": 75.60,
+  "CAKE-IL-E0014": 79.80,
+  "CAKE-IL-H0009": 100.80,
+  "CAKE-IL-I0002": 122.85,
+  "CAKE-IL-R0016": 123.48,
+  "CAKE-IL-H0008": 138.60,
+
+  /* ===== CUP SERIES ===== */
+  "CAKE-CUP-M0001": 90.72,
+  "CAKE-CUP-M0002": 90.72,
+  "CAKE-CUP-M0003": 90.72,
+  "CAKE-CUP-M0004": 90.72,
+  "CAKE-CUP-M0005": 90.72,
+  "CAKE-CUP-M0006": 90.72,
+  "CAKE-CUP-M0007": 90.72,
+  "CAKE-CUP-M0008": 90.72,
+  "CAKE-CUP-M0009": 90.72,
+  "CAKE-CUP-M0010": 90.72,
+
+  /* ===== OPERA SERIES ===== */
+  "CAKE-IL-O0001": 77.70,
+  "CAKE-IL-H0007": 98.91,
+  "CAKE-IL-M0035": 98.91,
+  "CAKE-IL-R0015": 98.91,
+  "CAKE-IL-S0005": 98.91,
+
+  /* ===== PETITE SERIES ===== */
+  "CAKE-IL-P0023": 41.58,
+  "CAKE-IL-P0024": 27.72,
+  "CAKE-IL-P0025": 46.20,
+  "CAKE-IL-P0026": 46.20,
+  "CAKE-IL-P0027": 40.43,
+
+  /* ===== MACARON ===== */
+  "MCN-M0012": 24.15,
+  "MCN-M0013": 24.15,
+  "MCN-M0014": 24.15,
+  "MCN-M0015": 24.15,
+  "MCN-M0016": 24.15,
+  "MCN-M0017": 24.15,
+  "MCN-M0018": 24.15,
+  "MCN-M0019": 24.15,
+  "MCN-M0020": 24.15,
+  "MCN-N0001": 44.10,
+  "MCN-N0002": 44.10,
+  "MCN-N0003": 44.10,
+  "MCN-N0004": 44.10,
+  "MCN-N0005": 44.10,
+  "MCN-N0006": 44.10,
+  "MCN-N0007": 44.10,
+  "MCN-N0008": 44.10,
+  "MCN-P0001": 53.55,
+  "MCN-P0002": 53.55,
+  "MCN-P0003": 53.55,
+  "MCN-P0004": 53.55,
+  "MCN-P0005": 53.55,
+  "MCN-P0007": 53.55,
+  "MCN-P0019": 53.55,
+
+  /* ===== MINI MUFFIN ===== */
+  "MFF-M0053": 25.20,
+  "MFF-M0054": 25.20,
+  "MFF-M0055": 25.20,
+  "MFF-M0056": 25.20,
+  "MFF-M0057": 25.20,
+
+  /* ===== MUFFIN ===== */
+  "MFF-M0023": 129.15,
+  "MFF-M0024": 129.15,
+  "MFF-M0025": 129.15,
+  "MFF-M0026": 129.15,
+  "MFF-M0027": 129.15,
+  "MFF-M0033": 138.60,
+  "MFF-M0034": 138.60,
+  "MFF-M0023-12": 54.18,
+  "MFF-M0024-12": 54.18,
+  "MFF-M0025-12": 54.18,
+  "MFF-M0026-12": 54.18,
+  "MFF-M0027-12": 54.18,
+  "MFF-M0033-12": 57.96,
+  "MFF-M0034-12": 57.96,
+
+  /* ===== PASTRY ===== */
+  "CRT-B0005": 123.90,
+  "CRT-B0006": 132.50,
+  "CRT-B0010": 140.40,
+  "CRT-B0011": 115.20,
+  "CRT-C0007": 72.29,
+  "CRT-C0010": 164.64,
+  "CRT-H0002": 164.64,
+  "CRT-S0002": 170.52,
+  "DP-C0001": 105.84,
+  "CRT-C0011": 352.80,
+  "DP-C0002": 164.64,
+  "DP-C0003": 204.12,
+  "DP-C0006": 88.20,
+  "DP-C0008": 73.50,
+  "DP-C0009": 132.30,
+  "PP-PB-B0009": 121.91,
+  "PP-PB-C0007": 93.24,
+  "PP-PB-K0002": 108.36,
+  "CRT-M0003": 60.00,
+  "PP-PB-R0001": 98.28,
+  "PP-PB-T0002": 98.28,
+  "PP-PB-S0007": 165.90,
+  "PP-PB-H0001": 207.90,
+  "CRT-B0013": 118.65,
+  "DP-N0001": 115.50,
+  "DP-T0001": 115.50,
+  "DP-Y0001": 115.50,
+  "DP-A0002": 115.50,
+
+  /* ===== PIZZA ===== */
+  "PIZZA-P0009": 109.20,
+  "PIZZA-P0013": 186.90,
+  "PIZZA-P0012": 111.30,
+  "PIZZA-P0001": 252.00,
+  "PIZZA-P0002": 109.20,
+/* ===== PRINTED / STAMPED MACARON (1 SIDED) ===== */
+"MCN-M0012-P-1S": 31.50,
+"MCN-M0013-P-1S": 31.50,
+"MCN-M0014-P-1S": 31.50,
+"MCN-M0015-P-1S": 31.50,
+"MCN-M0016-P-1S": 31.50,
+"MCN-M0017-P-1S": 31.50,
+"MCN-M0018-P-1S": 31.50,
+"MCN-M0019-P-1S": 31.50,
+"MCN-M0020-P-1S": 31.50,
+
+"MCN-N0001-P-1S": 100.80,
+"MCN-N0002-P-1S": 100.80,
+"MCN-N0003-P-1S": 100.80,
+"MCN-N0004-P-1S": 100.80,
+"MCN-N0005-P-1S": 100.80,
+"MCN-N0006-P-1S": 100.80,
+"MCN-N0007-P-1S": 100.80,
+"MCN-N0008-P-1S": 100.80,
+
+"MCN-P0001-P-1S": 114.98,
+"MCN-P0002-P-1S": 114.98,
+"MCN-P0003-P-1S": 114.98,
+"MCN-P0004-P-1S": 114.98,
+"MCN-P0005-P-1S": 114.98,
+"MCN-P0007-P-1S": 114.98,
+"MCN-P0019-P-1S": 114.98,
+
+/* ===== PRINTED / STAMPED MACARON (2 SIDED) ===== */
+"MCN-M0012-P-2S": 37.80,
+"MCN-M0013-P-2S": 37.80,
+"MCN-M0014-P-2S": 37.80,
+"MCN-M0015-P-2S": 37.80,
+"MCN-M0016-P-2S": 37.80,
+"MCN-M0017-P-2S": 37.80,
+"MCN-M0018-P-2S": 37.80,
+"MCN-M0019-P-2S": 37.80,
+"MCN-M0020-P-2S": 37.80,
+
+"MCN-N0001-P-2S": 110.25,
+"MCN-N0002-P-2S": 110.25,
+"MCN-N0003-P-2S": 110.25,
+"MCN-N0004-P-2S": 110.25,
+"MCN-N0005-P-2S": 110.25,
+"MCN-N0006-P-2S": 110.25,
+"MCN-N0007-P-2S": 110.25,
+"MCN-N0008-P-2S": 110.25,
+
+"MCN-P0001-P-2S": 124.43,
+"MCN-P0002-P-2S": 124.43,
+"MCN-P0003-P-2S": 124.43,
+"MCN-P0004-P-2S": 124.43,
+"MCN-P0005-P-2S": 124.43,
+"MCN-P0007-P-2S": 124.43,
+"MCN-P0019-P-2S": 124.43,
+
+  /* ===== SCONE ===== */
+  "SCN-P0001": 160.00
+
+  
+  
+};
+function getPriceCode(itemName, choice) {
+  // base product code = first part of name
+  let baseCode = itemName.split(" ")[0];
+
+  // printed macaron logic
+  if (baseCode.endsWith("-P")) {
+    if (choice === "1 SIDED") return `${baseCode}-1S`;
+    if (choice === "2 SIDED") return `${baseCode}-2S`;
+  }
+
+  return baseCode;
+}
+function generateOrderRef() {
+  const now = new Date();
+  const datePart = now.toISOString().slice(0, 10).replace(/-/g, "");
+  const timePart = now.getHours().toString().padStart(2, "0") +
+                   now.getMinutes().toString().padStart(2, "0");
+  const randomPart = Math.floor(100 + Math.random() * 900); // 3 digits
+
+  return `PWDF-${datePart}-${timePart}-${randomPart}`;
+}
+
+function updateSubmitButtonState() {
+  const btn = document.getElementById("submitOrderBtn");
+  btn.disabled = CART.length === 0;
+  btn.style.opacity = CART.length === 0 ? 0.5 : 1;
+}
+
+const originalUpdateCounts = updateCounts;
+updateCounts = function () {
+  originalUpdateCounts();
+  updateSubmitButtonState();
+};
+
+document.addEventListener("DOMContentLoaded", updateSubmitButtonState);
+
+function getDecorationPrice(category, choice, addon, qty = 1) {
+  if (!addon) return 0;
+
+  if (
+    (category === "BLOCK CAKE" && choice.includes("45")) ||
+    (category === "SLAB CAKE" && choice.includes("90"))
+  ) {
+    return (DECORATION_PRICE[category] ?? 0) * qty;
+  }
+
+  return 0;
+}
+
+let CART = [];
+
+const submitOrderBtn = document.getElementById("submitOrderBtn");
+const orderGuide = document.getElementById("orderGuide");
+const summaryPopup = document.getElementById("summaryPopup");
+const popupSummary = document.getElementById("popupSummary");
+const customerName = document.getElementById("customerName");
+const brandName = document.getElementById("brandName");
+const contactNumber = document.getElementById("contactNumber");
+const cartCount = document.getElementById("cartCount");
+const cartCountBottom = document.getElementById("cartCountBottom");
+const smartSearchInput = document.getElementById("smartSearchInput");
+const menuContainer = document.getElementById("menuContainer");
+
+function updateCounts() {
+  const total = CART.reduce((s, i) => s + i.qty, 0);
+  cartCount.textContent = total;
+  cartCountBottom.textContent = total;
+}
+
+/* ADD TO CART + DECORATION */
+function addToCart(item, qty, choice, category, btn) {
+  let addon = "";
+
+  if (
+    (category === "BLOCK CAKE" && choice.includes("45")) ||
+    (category === "SLAB CAKE" && choice.includes("90"))
+  ) {
+    if (confirm("Add Decoration + RM 10.50 ?")) {
+      addon = "Decoration + RM 10.50";
+    }
+  }
+
+  const existing = CART.find(
+    i => i.item === item && i.choice === choice && i.addon === addon
+  );
+
+  if (existing) existing.qty += qty;
+  else CART.push({ item, qty, choice, addon, category });
+
+  updateCounts();
+
+  btn.textContent = "✓ Added";
+  btn.classList.add("added");
+  setTimeout(() => {
+    btn.textContent = "Add";
+    btn.classList.remove("added");
+  }, 1000);
+}
+
+/* HIDE MENU UNTIL SEARCH */
+function normalizeFileName(text) {
+  return text
+    .replace(/[“”‘’"']/g, "")
+    .replace(/[^a-zA-Z0-9\s\-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .toLowerCase();
+}
+
+function getMuffinBaseName(productName) {
+  let label = productName.toUpperCase();
+  const muffinIndex = label.indexOf("MUFFIN");
+  if (muffinIndex !== -1) {
+    label = label.slice(muffinIndex + 6).trim();
+  }
+  label = label
+    .replace(/\s+SLAB.*$/i, "")
+    .replace(/\s+x\s+12PCS.*$/i, "")
+    .replace(/\s*BLK-12.*$/i, "")
+    .replace(/\s*110GM\+\/-.*$/i, "")
+    .replace(/\s*110\s*GM.*$/i, "")
+    .replace(/\s*TRAY-24.*$/i, "")
+    .replace(/\s*\(.*$/i, "")
+    .trim();
+
+  if (!label) {
+    return "Muffin";
+  }
+  return `Muffin ${label}`;
+}
+
+// exact mapping from Product.js muffin product codes to Muffin/ photo filenames
+const MUFFIN_IMAGE_MAP = {
+  "MFF-M0023": "Muffin Blueberry .jpg",
+  "MFF-M0024": "Muffin Chocolate Banan .jpg",
+  "MFF-M0025": "Muffin Chocolate Chip .jpg",
+  "MFF-M0026": "Muffin Coffee Walnut .jpg",
+  "MFF-M0027": "Muffin Orange Poppy Seed .jpg",
+  "MFF-M0033": "Muffin Double Chocolate .jpg",
+  "MFF-M0034": "Muffin Red Velvet with Cream Cheese .jpg",
+  "MFF-M0023-12": "Muffin Blueberry .jpg",
+  "MFF-M0024-12": "Muffin Chocolate Banan .jpg",
+  "MFF-M0025-12": "Muffin Chocolate Chip .jpg",
+  "MFF-M0026-12": "Muffin Coffee Walnut .jpg",
+  "MFF-M0027-12": "Muffin Orange Poppy Seed .jpg",
+  "MFF-M0033-12": "Muffin Double Chocolate .jpg",
+  "MFF-M0034-12": "Muffin Red Velvet with Cream Cheese .jpg"
+};
+
+function getMuffinImageFile(productName) {
+  const code = productName.split(" ")[0];
+  return MUFFIN_IMAGE_MAP[code] || null;
+}
+
+// If imageMap.js wasn't generated/loaded, attempt to build IMAGE_MAP at runtime
+// by parsing mapping.csv (fallback for local development environments).
+(function ensureImageMapFromCSV() {
+  if (typeof IMAGE_MAP !== "undefined" && IMAGE_MAP && Object.keys(IMAGE_MAP).length) return;
+  IMAGE_MAP = {};
+  fetch('mapping.csv').then(r => r.text()).then(txt => {
+    const lines = txt.split(/\r?\n/);
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line) continue;
+      const m = line.match(/^"([^"]+)","([^"]*)","([^"]*)","([^"]*)"$/);
+      if (!m) continue;
+      const code = m[1];
+      const path = m[3].replace(/\\/g, '/');
+      IMAGE_MAP[code] = path;
+    }
+    console.info('IMAGE_MAP populated from mapping.csv with', Object.keys(IMAGE_MAP).length, 'entries');
+  }).catch(e => {
+    // silent fallback
+  });
+})();
+
+// Build an index of available image filenames (normalized -> path)
+(function buildImageLookup() {
+  if (typeof IMAGE_BY_NORM !== "undefined" && Object.keys(IMAGE_BY_NORM).length) return;
+  IMAGE_BY_NORM = {};
+  function populate(arr){
+    arr.forEach(e => {
+      const name = (e.Name || '').toString().trim();
+      const path = (e.Path || '').toString().replace(/\\/g, '/');
+      if (!name || !path) return;
+      const norm = normalizeFileName(name);
+      IMAGE_BY_NORM[norm] = path;
+      const withoutPrefix = normalizeFileName(name.replace(/^muffin\\s+/i, '').replace(/\\s+muffin$/i, ''));
+      if (withoutPrefix && !IMAGE_BY_NORM[withoutPrefix]) IMAGE_BY_NORM[withoutPrefix] = path;
+    });
+    console.info('IMAGE_BY_NORM populated', Object.keys(IMAGE_BY_NORM).length);
+  }
+
+  if (typeof IMAGE_FILES !== 'undefined' && Array.isArray(IMAGE_FILES)){
+    populate(IMAGE_FILES);
+  } else {
+    fetch('imageFiles.json').then(r => r.json()).then(populate).catch(()=>{});
+  }
+})();
+
+function getImageCandidates(productName, category) {
+  // Prefer explicit mapping generated by imageMap.js
+  const code = (productName || "").split(" ")[0];
+  if (typeof IMAGE_MAP !== "undefined" && IMAGE_MAP && IMAGE_MAP[code]) {
+    return [IMAGE_MAP[code]];
+  }
+
+  // Try exact filename match using the discovered imageFiles.json
+  try {
+    const label = (productName || "").replace(code, "").trim();
+    const candidatesToTry = [];
+    const normLabel = normalizeFileName(label || productName);
+    if (normLabel) candidatesToTry.push(normLabel);
+    // also try with category prefix (e.g., "Muffin Blueberry")
+    const catPrefix = category === 'MUFFIN' ? 'Muffin' : '';
+    if (catPrefix) {
+      const pref = normalizeFileName(catPrefix + ' ' + label);
+      if (pref) candidatesToTry.push(pref);
+      const suff = normalizeFileName(label + ' ' + catPrefix);
+      if (suff) candidatesToTry.push(suff);
+    }
+    for (const n of candidatesToTry) {
+      if (IMAGE_BY_NORM && IMAGE_BY_NORM[n]) return [IMAGE_BY_NORM[n]];
+    }
+  } catch (e) {
+    // ignore lookup errors
+  }
+
+  const folder = category === "MUFFIN" ? "Muffin" : "images";
+
+  if (category === "MUFFIN") {
+    const filename = getMuffinImageFile(productName);
+    if (filename) {
+      return [`${folder}/${filename}`];
+    }
+  }
+
+  const baseName = category === "MUFFIN" ? getMuffinBaseName(productName) : productName;
+  const cleanName = normalizeFileName(baseName);
+  const candidates = [`${folder}/${cleanName}.jpg`];
+
+  if (category === "MUFFIN") {
+    candidates.push(`${folder}/${cleanName} .jpg`);
+    candidates.push(`${folder}/${cleanName}.png`);
+    candidates.push(`${folder}/${cleanName} .png`);
+    candidates.push(`${folder}/${cleanName}.jpeg`);
+    candidates.push(`${folder}/${cleanName} .jpeg`);
+  }
+
+  return candidates;
+}
+
+function handleProductImageError(img) {
+  const candidates = img.dataset.srcs ? img.dataset.srcs.split("|") : [];
+  const attempt = Number(img.dataset.attempt || "0");
+  const nextIndex = attempt + 1;
+
+  if (nextIndex < candidates.length) {
+    img.dataset.attempt = nextIndex;
+    img.onerror = handleProductImageError;
+    img.src = candidates[nextIndex];
+    return;
+  }
+
+  img.onerror = null;
+  img.src = "logo.png";
+}
+
+function renderMenu(keyword = "") {
+  menuContainer.innerHTML = "";
+  keyword = keyword.trim().toLowerCase();
+  if (!keyword) return;
+
+  const matches = [];
+  Object.keys(PRODUCTS).forEach(category => {
+    PRODUCTS[category].forEach(p => {
+      const text = (p.name + p.choice + p.addon).toLowerCase();
+      if (!text.includes(keyword)) return;
+      matches.push({ category, item: p });
+    });
+  });
+
+  matches.sort((a, b) => {
+    const aMuffin = a.item.name.toLowerCase().includes("muffin");
+    const bMuffin = b.item.name.toLowerCase().includes("muffin");
+    if (aMuffin !== bMuffin) return aMuffin ? -1 : 1;
+    return a.item.name.localeCompare(b.item.name);
+  });
+
+  if (!matches.length) {
+    const noResult = document.createElement("div");
+    noResult.className = "no-results";
+    noResult.textContent = "No products found. Try another search term.";
+    menuContainer.appendChild(noResult);
+    return;
+  }
+
+  matches.forEach(({ category, item: p }) => {
+    const code = p.name.split(" ")[0] || "";
+    const label = p.name.replace(code, "").trim();
+    const imageList = getImageCandidates(p.name, category);
+    const imagePath = imageList[0];
+    const card = document.createElement("div");
     card.className = "item-card";
-    let meta = item.addon ? `<div class="item-meta">${item.addon}</div>` : "";
     card.innerHTML = `
-      <div>
-        <div class="item-name">${item.name}</div>
-        ${meta}
+      <div class="product-layout-photo">
+        <img src="${imagePath}" alt="${label}" data-srcs="${imageList.join("|")}" data-attempt="0" onerror="handleProductImageError(this)" />
       </div>
+      <div class="item-name">${label}</div>
+      <div class="item-meta">${code}</div>
       <div class="controls">
-        ${item.choice ? `<select class="qty-box choice">${item.choice.split('/').map(c=>`<option>${c.trim()}</option>`).join('')}</select>` : ''}
-        <input type="number" class="qty-box qty" placeholder="Qty" min="1">
+        ${
+          p.choice
+            ? `<select class="qty-box">
+                ${p.choice.split("/").map(c => `<option>${c.trim()}</option>`).join("")}
+              </select>`
+            : ""
+        }
+        <input type="number" min="1" value="1" class="qty-box">
         <button class="add-btn">Add</button>
       </div>
     `;
-    card.querySelector(".add-btn").addEventListener("click", ()=>{
-      let qtyInput = card.querySelector(".qty");
-      let qty = qtyInput.value;
-      if(!qty || Number(qty) <= 0) return;
-      let choiceEl = card.querySelector(".choice");
-      let choice = choiceEl ? choiceEl.value : "";
-      CART.push({ item: item.name, qty: Number(qty), choice });
-      updateSummaryBar();
-      qtyInput.value = "";
-    });
-    catDiv.appendChild(card);
-  });
-  container.appendChild(catDiv);
-});
 
-let CART = [];
-function updateSummaryBar(){ document.getElementById("cartCount").innerText = CART.reduce((s,i)=>s+i.qty,0); }
-function openSummary(){
-  let output = "";
-  CART.forEach(c=> { output += `• ${c.item}${c.choice ? " ("+c.choice+")":""} x ${c.qty}
-`; });
-  document.getElementById("summaryText").value = output || "No items selected.";
-  document.getElementById("summaryPopup").style.display = "flex";
+    const btn = card.querySelector(".add-btn");
+    if (btn) {
+      btn.onclick = () =>
+        addToCart(
+          p.name,
+          Number(card.querySelector("input").value),
+          card.querySelector("select")?.value || "",
+          category,
+          btn
+        );
+    }
+
+    menuContainer.appendChild(card);
+  });
 }
-function closeSummary(){ document.getElementById("summaryPopup").style.display = "none"; }
-function sendWhatsApp(){ let msg = encodeURIComponent(document.getElementById("summaryText").value); window.open("https://wa.me/?text="+msg, "_blank"); }
-function copyText(){ navigator.clipboard.writeText(document.getElementById("summaryText").value).then(()=>{ alert('Copied summary to clipboard'); }); }
-updateSummaryBar();
+
+smartSearchInput.oninput = e => {
+  const guide = document.getElementById("orderGuide");
+  if (guide) guide.style.display = "none";
+  document.body.classList.toggle("search-active", !!e.target.value.trim());
+  renderMenu(e.target.value);
+};
+
+/* CART POPUP */
+function openOrderReview() {
+  if (!CART.length) {
+    alert("Cart empty");
+    return;
+  }
+  renderCart();
+  summaryPopup.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+submitOrderBtn.onclick = openOrderReview;
+
+function getUnitPrice(itemName, choice) {
+  const code = getPriceCode(itemName, choice);
+  return PRICE_MAP[code] ?? 0;
+}
+
+function renderCart() {
+  popupSummary.innerHTML = "";
+  if (!CART.length) {
+    const empty = document.createElement("div");
+    empty.className = "no-results";
+    empty.textContent = "Your cart is empty.";
+    popupSummary.appendChild(empty);
+    return;
+  }
+
+  let total = 0;
+  CART.forEach((c, i) => {
+    const unitPrice = getUnitPrice(c.item, c.choice);
+    const decorationPrice = getDecorationPrice(c.category, c.choice, c.addon, c.qty);
+    const lineTotal = unitPrice * c.qty + decorationPrice;
+    total += lineTotal;
+
+    const line = document.createElement("div");
+    line.style.display = "flex";
+    line.style.alignItems = "center";
+    line.style.justifyContent = "space-between";
+    line.style.gap = "8px";
+    line.style.marginBottom = "10px";
+    line.style.padding = "10px";
+    line.style.border = "1px solid #eee";
+    line.style.borderRadius = "12px";
+    line.innerHTML = `
+      <div style="flex:1; min-width:0;">
+        <div style="font-weight:700;">${c.item}${c.choice ? ` (${c.choice})` : ""}</div>
+        ${c.addon ? `<div class="item-meta">${c.addon}</div>` : ""}
+      </div>
+      <div style="display:grid; gap:6px; align-items:center; text-align:right; min-width:110px;">
+        <input type="number" value="${c.qty}" min="1" style="width:72px; padding:6px; border-radius:8px; border:1px solid #ccc; text-align:right;">
+        <button style="border:none; background:#ff6a00; color:#fff; padding:8px 10px; border-radius:10px; cursor:pointer;">Remove</button>
+      </div>
+    `;
+
+    const qtyInput = line.querySelector("input");
+    qtyInput.oninput = e => {
+      c.qty = Math.max(1, Number(e.target.value));
+      renderCart();
+      updateCounts();
+    };
+
+    const removeBtn = line.querySelector("button");
+    removeBtn.onclick = () => {
+      CART.splice(i, 1);
+      renderCart();
+      updateCounts();
+    };
+
+    popupSummary.appendChild(line);
+  });
+
+  const totalLine = document.createElement("div");
+  totalLine.style.marginTop = "16px";
+  totalLine.style.paddingTop = "14px";
+  totalLine.style.borderTop = "1px solid #eee";
+  totalLine.style.display = "flex";
+  totalLine.style.justifyContent = "space-between";
+  totalLine.style.fontWeight = "700";
+  totalLine.innerHTML = `
+    <div>Total</div>
+    <div>RM ${total.toFixed(2)}</div>
+  `;
+  popupSummary.appendChild(totalLine);
+}
+
+/* SUBMIT */
+function buildText() {
+  if (!customerName.value || !brandName.value || !contactNumber.value) {
+    alert("Please fill in Customer Name, Brand Name and Contact Number.");
+    return null;
+  }
+
+  let total = 0;
+  const orderRef = generateOrderRef();
+
+  let text = `✅ ORDER CONFIRMATION
+
+Order Ref: ${orderRef}
+
+Customer: ${customerName.value}
+Brand: ${brandName.value}
+Contact: ${contactNumber.value}
+
+ITEMS:
+`;
+
+  CART.forEach(item => {
+    const unitPrice = getUnitPrice(item.item, item.choice);
+    const baseTotal = unitPrice * item.qty;
+    const decoPrice = getDecorationPrice(item.category, item.choice, item.addon, item.qty);
+    const lineTotal = baseTotal + decoPrice;
+    total += lineTotal;
+
+    text += `${item.qty} x ${item.item}${item.choice ? ` (${item.choice})` : ""}${item.addon ? ` - ${item.addon}` : ""} | RM ${lineTotal.toFixed(2)}\n`;
+  });
+
+  text += `
+-------------------------
+TOTAL PRICE: RM ${total.toFixed(2)}
+
+${ORDER_POLICY_TEXT}`;
+
+  return text;
+}
+
+function submitWhatsApp() {
+  const t = buildText();
+  if (t) window.open(`https://wa.me/?text=${encodeURIComponent(t)}`);
+}
+
+function submitEmail() {
+  const t = buildText();
+  if (t) location.href = `mailto:?subject=New Order&body=${encodeURIComponent(t)}`;
+}
+
+function closeSummary() {
+  summaryPopup.style.display = "none";
+  document.body.style.overflow = "auto";
+}
