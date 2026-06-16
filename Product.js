@@ -1306,6 +1306,16 @@ const PRODUCTS = {
       "addon": ""
     },
     {
+      "name": "MFF-M0021 110 GM MUFFIN ORANGE POPPY SEED & CHOCOLATE BANANA x 30PCS",
+      "choice": "",
+      "addon": ""
+    },
+    {
+      "name": "MFF-M0022 110 GM MUFFIN CHOCOLATE CHIPS & BLUEBERRY x 30PCS",
+      "choice": "",
+      "addon": ""
+    },
+    {
       "name": "MFF-M0025 110 GM MUFFIN CHOCOLATE CHIPS SLAB-30 110GM+/-",
       "choice": "",
       "addon": ""
