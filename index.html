@@ -176,7 +176,7 @@ body.search-active #menuContainer {
 
 /* ===== ITEM CARD ===== */
 .item-card {
-  background: #ffffff;
+  background: #d4a92c;
   padding: 10px;
   border-radius: 12px;
   width: 100%;
@@ -187,14 +187,14 @@ body.search-active #menuContainer {
   justify-content: flex-start;
   gap: 8px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  border: 1px solid #e5e5e5;
+  border: 1px solid #000000;
 }
 .item-card .product-layout-photo {
   width: 100%;
   aspect-ratio: 1;
   min-height: 140px;
   background: #ffffff;
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -215,7 +215,7 @@ body.search-active #menuContainer {
 }
 .item-meta {
   font-size: 11px;
-  color: #555555;
+  color: #111111;
 }
 .no-results {
   grid-column: 1 / -1;
@@ -260,21 +260,23 @@ body.search-active #menuContainer {
   max-width: 90px;
   padding: 8px 12px;
   border-radius: 10px;
-  background: #d4a92c;
+  background: transparent;
   color: #111;
-  border: none;
+  font-weight: 700;
+  border: 1px solid #000;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(212,169,44,0.18);
+  box-shadow: none;
   font-size: 12px;
 }
 .controls button.add-btn:hover {
-  background: #e5bc3a;
+  background: rgba(0, 0, 0, 0.12);
 }
 .summary-btn {
-  background: #d4a92c;
+  background: transparent;
   color: #111;
+  font-weight: 700;
   padding: 8px 14px;
-  border: none;
+  border: 1px solid #000;
   border-radius: 10px;
   font-size: 12px;
 }
@@ -290,14 +292,50 @@ body.search-active #menuContainer {
   padding: 16px;
 }
 .summary-box {
-  background: #fff;
+  background: #d4a92c;
   width: 100%;
   max-width: 600px;
   padding: 14px;
   border-radius: 10px;
+  border: 1px solid #000;
   max-height: 84vh;
   overflow-y: auto;
   margin: auto;
+  color: #111;
+}
+.summary-box h3,
+.summary-box p,
+.summary-box strong,
+.summary-box input,
+.summary-box button,
+.summary-box .policy-box {
+  color: #111;
+}
+.summary-box h3,
+.summary-box .policy-box,
+.summary-box strong,
+.summary-box p {
+  font-weight: 700;
+}
+.summary-box input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+}
+.summary-box button {
+  background: transparent;
+  color: #111;
+  font-weight: 700;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.summary-box button:hover {
+  background: rgba(0, 0, 0, 0.12);
 }
 
 /* ===== MOBILE ===== */
